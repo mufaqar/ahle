@@ -1,15 +1,15 @@
 import React from 'react'
-import {Data} from "@/const/jammattest"
+import Data from "@/const/jammattest"
 
 interface NazryatProps {
     selectedName: string;
   }
 
 const Nazryat = ({ selectedName }: any) => {
-    const filteredData = Data.filter(item => item.Name === selectedName);
+    const filteredData = Data?.filter(item => item.Name === selectedName);
     return (
         <div className='items-center font-ahle mt-7 '>
-            {filteredData.map((item, idx) => (
+            {filteredData.map((item:any, idx:number) => (
                 <div key={idx} className=''>
                     <div className="flex md:flex-row flex-col justify-between gap-8">
                         <div className="md:w-1/3 w-full">

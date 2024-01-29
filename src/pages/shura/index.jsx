@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import ModelBox from '../../components/ModelBox/ModelBox'
+import ModelBox from '../../components/ModelBox'
 import { Shura_Gallery } from "@/const/exports";
 import PageBanner from "@/components/banner";
 

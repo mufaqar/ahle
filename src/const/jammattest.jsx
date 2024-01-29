@@ -1,4 +1,4 @@
-export const Data = [
+const Data = [
     {
         id: '1',
         Name: "مرکزیہ تعارف",
@@ -32,7 +32,7 @@ export const Data = [
             
             
         ],
-        img: "/images/slid1.jpeg",
+        img: "/assets/images/slid1.jpeg",
         info: [
             {
                 position: 'اہل حدیث یوتھ فورس ',
@@ -44,3 +44,5 @@ export const Data = [
     },
    
 ]
+
+export default Data;
