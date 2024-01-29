@@ -4,13 +4,15 @@ import Tabs from "@/components/tabs";
 import Link from "next/link";
 import { ConvertDateIntoUrdu, GetWordStr } from "@/utils/index";
 import { PostMokeData } from "@/const/post"
-import Image from "next/image";
+
 import { VideosGallery } from "@/components/videos";
 import BooksSection from "@/components/bookssection";
 import Team from "@/components/team"
 import apolloClient from '@/config/client';
 import { AllPosts, Books, Members, UpdatesByCategoryHadees, UpdatesByCategoryQoute, UpdatesByCategoryQuran, Videos } from '@/config/queries';
 import { GetServerSideProps } from "next";
+
+import Image from 'next/image'
 
 export default function Home({postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData }:any) {
    
@@ -33,12 +35,16 @@ export default function Home({postData, dailyHadees, dailyQuran, dailyQoute, vid
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
                     <Link href={`/blogs/${item.databaseId}`}>
-                    <img
+                    <Image
                       src={item?.featuredImage?.node?.mediaItemUrl}
                       alt="thumbnil"
+                      width={400}
+                      height={400}
                      
                       className="w-full h-full object-cover opacity-60"
                     />
+
+                    
                     </Link>
                     <span className="bg-yellow text-black py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
                       {item?.categories?.nodes[0]?.name}
