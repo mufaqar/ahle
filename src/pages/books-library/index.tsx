@@ -1,5 +1,5 @@
 import PageBanner from '@/components/banner';
-import PostDesign2 from '@/components/post-design-2';
+import PostDesign from '@/components/post-design-2';
 import React from 'react';
 
 const Books_Library = () => {
