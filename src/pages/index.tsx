@@ -8,8 +8,13 @@ import Image from "next/image";
 import { VideosGallery } from "@/components/videos";
 import BooksSection from "@/components/bookssection";
 import Team from "@/components/team"
+import apolloClient from '@/config/client';
+import { AllPosts, Books, Members, UpdatesByCategoryHadees, UpdatesByCategoryQoute, UpdatesByCategoryQuran, Videos } from '@/config/queries';
+import { GetServerSideProps } from "next";
 
-export default function Home() {
+export default function Home({postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData }:any) {
+   
+  const posts = postData
   return (
     <>
       <Main1 />
@@ -24,25 +29,25 @@ export default function Home() {
           </div>
           <div className="md:flex gap-6">
             <div className="md:w-[40%] w-full overflow-hidden inline-block shadow-xl">
-              {PostMokeData?.slice(0, 1).map((item, idx) => {
+              {posts?.slice(0, 1).map((item:any, idx:number) => {
                 return (
                   <div key={idx} className="relative h-[540px] w-full bg-black">
-                    <Link href={`/blogs/${item.id}`}>
-                      <img
-                        src={item?.featuredImage}
-                        alt="thumbnil"
-
-                        className="w-full h-full object-cover opacity-60"
-                      />
+                    <Link href={`/blogs/${item.databaseId}`}>
+                    <img
+                      src={item?.featuredImage?.node?.mediaItemUrl}
+                      alt="thumbnil"
+                     
+                      className="w-full h-full object-cover opacity-60"
+                    />
                     </Link>
                     <span className="bg-yellow text-black py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:right-5 right-0 text-sm">
-                      {item?.categories[0]}
+                      {item?.categories?.nodes[0]?.name}
                     </span>
                     <span className="bg-black text-yellow py-1 !pb-3 px-2 uppercase absolute md:top-5 top-0 md:left-5 left-0 text-sm">
                       {ConvertDateIntoUrdu(item?.date)}
                     </span>
                     <div className="absolute bottom-0 md:p-5 p-2 bg-white w-full border-t-4 border-yellow">
-                      <Link href={`/blogs/${item.id}`} className="text-2xl font-ahle text-black">
+                      <Link href={`/blogs/${item.databaseId}`} className="text-2xl font-ahle text-black">
                         {item?.title}
                       </Link>
                     </div>
@@ -51,18 +56,18 @@ export default function Home() {
               })}
             </div>
             <div className="flex flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[60%] w-full">
-              {PostMokeData?.slice(1, 4).map((item, idx) => {
+              {posts?.slice(1, 4).map((item:any, idx:number) => {
                 return (
                   <div key={idx} className={`group overflow-hidden bg-light-gray shadow-lg md:flex`}
                   >
-                    <Link href={`/blogs/${item?.id}`} className={`md:w-1/3`}>
+                    <Link href={`/blogs/${item?.databaseId}`} className={`md:w-1/3`}>
                       <figure
                         className={`overflow-hidden relative md:w-full h-full`}
                       >
                         <img
-                          src={item?.featuredImage}
+                          src={item?.featuredImage?.node?.mediaItemUrl}
                           alt=""
-
+                        
                           className={`w-full md:h-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
                         />
                       </figure>
@@ -74,14 +79,14 @@ export default function Home() {
                         <p className="capitalize text-light-blue text-sm">
                           <span className="uppercase">{ConvertDateIntoUrdu(item.date)}</span>
                           <span> - </span>
-                          <span>By {item?.author} </span>
+                          <span>By {item?.author?.node?.name}</span>
                         </p>
-                        <Link href={`/blogs/${item?.id}`}>
-                          <h2
-                            className={`text-[18px] mt-2 leading-[2.3rem] font-medium font-ahle `}
-                          >
-                            {item?.title}
-                          </h2>
+                        <Link href={`/blogs/${item?.databaseId}`}>
+                        <h2
+                          className={`text-[18px] mt-2 leading-[2.3rem] font-medium font-ahle `}
+                        >
+                          {item?.title}
+                        </h2>
                         </Link>
                       </div>
                       <div className="mt-3 text-text leading-8 font-normal" dangerouslySetInnerHTML={{ __html: GetWordStr(item?.excerpt) }} />
@@ -295,3 +300,67 @@ export const booksData = [
       img: "/images/book4.jpg",
   },
 ]
+
+
+async function getData() {
+  const [posts, hadees, quran, qoute, videos, books, members] = await Promise.all([
+    apolloClient.query({ query: AllPosts }),
+    apolloClient.query({ query: UpdatesByCategoryHadees }),
+    apolloClient.query({ query: UpdatesByCategoryQuran }),
+    apolloClient.query({ query: UpdatesByCategoryQoute }),
+    apolloClient.query({ query: Videos }),
+    apolloClient.query({ query: Books }),
+    apolloClient.query({
+        query: Members,
+        variables: {
+          first: 10,
+        },
+    }),
+  ]);
+  const postData = posts?.data?.posts?.nodes
+  const dailyHadees = hadees?.data?.updateType?.updates?.nodes
+  const dailyQuran = quran?.data?.updateType?.updates?.nodes
+  const dailyQoute = qoute?.data?.updateType?.updates?.nodes
+  const videosData = videos?.data?.videos?.nodes
+  const booksData = books?.data?.books?.edges
+  const membersData = members?.data?.members?.nodes
+
+  if (!postData) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+
+  return { postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData }
+}
+
+
+
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const [posts, hadees, quran, qoute, videos, books, members] = await Promise.all([
+    apolloClient.query({ query: AllPosts }),
+    apolloClient.query({ query: UpdatesByCategoryHadees }),
+    apolloClient.query({ query: UpdatesByCategoryQuran }),
+    apolloClient.query({ query: UpdatesByCategoryQoute }),
+    apolloClient.query({ query: Videos }),
+    apolloClient.query({ query: Books }),
+    apolloClient.query({
+        query: Members,
+        variables: {
+          first: 10,
+        },
+    }),
+  ]);
+  const postData = posts?.data?.posts?.nodes
+  const dailyHadees = hadees?.data?.updateType?.updates?.nodes
+  const dailyQuran = quran?.data?.updateType?.updates?.nodes
+  const dailyQoute = qoute?.data?.updateType?.updates?.nodes
+  const videosData = videos?.data?.videos?.nodes
+  const booksData = books?.data?.books?.edges
+  const membersData = members?.data?.members?.nodes
+  return {
+     props: {
+      postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData 
+     },
+  };
+}
