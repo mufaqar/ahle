@@ -64,9 +64,11 @@ export default function Home({postData, dailyHadees, dailyQuran, dailyQoute, vid
                       <figure
                         className={`overflow-hidden relative md:w-full h-full`}
                       >
-                        <img
+                        <Image
                           src={item?.featuredImage?.node?.mediaItemUrl}
                           alt=""
+                          width={400}
+                          height={400}
                         
                           className={`w-full md:h-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover h-[240px] sm:h-[190px]`}
                         />
