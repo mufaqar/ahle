@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
-import { YtVideo } from '@/components/ui/YtVideo'
+import { YtVideo } from '@/components/YtVideo'
 import PageBanner from '@/components/banner';
 
 const Page = () => {

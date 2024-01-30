@@ -1,8 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import Layout from '@/components/Layout';
 import { Hadith_Data } from '@/const/hadith';
-import ModelBox from '@/components/ModelBox';
+//import ModelBox from '@/components/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import PageBanner from '@/components/banner';
 
@@ -36,9 +35,9 @@ const Ahlehadith_Magazine = () => {
               </Masonry>
             </ResponsiveMasonry>
           </div>
-          {
+          {/* {
             modalIsOpen && <ModelBox modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} URL={URL} />
-          }
+          } */}
         </div>
       </section>
     </main>
