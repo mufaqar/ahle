@@ -1,12 +1,12 @@
-import PageBanner from "@/components/banner";
-import VideosGallery from "@/components/videos-gallery/videos";
-import apolloClient from "@/config/client";
+import { GetServerSideProps } from "next";
+import PageBanner from "../../components/banner";
+
+import apolloClient from "../../config/client";
 import { VideoType, Videos as VideoQ } from "@/config/queries";
 import React from "react";
 
-const Videos = async () => {
-  const { videosData, videoTypeData } = await getData();
-
+export default function Videos({videosData,videoTypeData}:any) {
+  
   return (
     <main>
       <PageBanner
@@ -17,7 +17,7 @@ const Videos = async () => {
         buttonLink=""
       />
       <section className='container px-4 md:px-10 mx-auto'>
-        {videoTypeData?.map((item, idx) => {
+        {videoTypeData?.map((item:any, idx:number) => {
           return (
             <div className="my-10 md:my-16 md:mt-16" key={idx}>
               <div>
@@ -26,7 +26,7 @@ const Videos = async () => {
                     {item?.name}
                   </h2>
                 </div>
-                <VideosGallery type={item?.name} videosData={videosData} />
+                {/* <VideosGallery type={item?.name} videosData={videosData} /> */}
               </div>
             </div>
           );
@@ -36,9 +36,9 @@ const Videos = async () => {
   );
 };
 
-export default Videos;
 
-async function getData() {
+
+export const getServerSideProps: GetServerSideProps = async () => {
   const [videos, videoType] = await Promise.all([
     apolloClient.query({ query: VideoQ }),
     apolloClient.query({ query: VideoType }),
@@ -51,5 +51,5 @@ async function getData() {
     throw new Error("Failed to fetch data");
   }
 
-  return { videosData, videoTypeData };
+  return { props:{ videosData, videoTypeData }};
 }
