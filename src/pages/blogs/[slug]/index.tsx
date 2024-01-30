@@ -1,18 +1,19 @@
 import Aside, { SideBarHeading } from "@/components/aside";
 import Footer from "@/components/footer";
 import PageBanner from "@/components/banner";
-import PostDesign from '../../components/post-design-2';
+//import PostDesign from '@/components/post-design-2';
 import apolloClient from "@/config/client";
 import { AllPosts, singlePost } from "@/config/queries";
 import { PostMokeData } from "@/const/post";
 import Image from "next/image";
 import React from "react";
+import { GetServerSideProps } from "next";
 
 
-const Slug = async (props:any) => {
+export default function PostSlug({ post, posts }: any) {
 
-  const {post, posts} =  await getData(props?.params?.slug)
-    
+ 
+
   return (
     <>
       <PageBanner
@@ -20,7 +21,7 @@ const Slug = async (props:any) => {
         subTitle={post?.excerpt}
         image={post?.featuredImage?.node?.mediaItemUrl}
       />
-       <section className='container px-4 md:px-10 mx-auto'>
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className="lg:flex gap-10 my-10">
           <section className="lg:w-[73%]">
             <div className="flex items-center justify-start gap-2">
@@ -39,7 +40,7 @@ const Slug = async (props:any) => {
                 className="w-full mt-6"
               />
             </figure>
-            <div className="mt-8 text-text leading-8 tracking-wide" dangerouslySetInnerHTML={{__html:post?.content}}/>
+            <div className="mt-8 text-text leading-8 tracking-wide" dangerouslySetInnerHTML={{ __html: post?.content }} />
 
             <SideBarHeading long={true} className="mt-20"> Related Post </SideBarHeading>
             <div className="grid gap-6 md:grid-cols-3 my-10">
@@ -49,46 +50,44 @@ const Slug = async (props:any) => {
                 );
               })} */}
             </div>
-           
-          
+
+
           </section>
 
           <Aside
             aboutAuthor={true}
             social={true}
             newsletter={true}
-            latestPost={posts.slice(0,5)}
+            latestPost={posts.slice(0, 5)}
             latestCategories={PostMokeData}
             advertisement={true}
           />
         </div>
       </section>
-  
+
       <Footer />
     </>
   );
 };
 
-export default Slug;
 
 
-async function getData(slug:any) {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  const { slug } = query;
+
   const [postres, postsRes] = await Promise.all([
-    apolloClient.query({ 
+    apolloClient.query({
       query: singlePost,
       variables: {
         id: slug,
       }
-     }),
-     apolloClient.query({ 
+    }),
+    apolloClient.query({
       query: AllPosts
-     }),
+    }),
   ]);
   const post = postres?.data?.post
   const posts = postsRes?.data?.posts.nodes
-  if (!post) {
-    throw new Error('Failed to fetch data')
-  }
 
-  return { post, posts }
+  return { props: { post, posts } }
 }
