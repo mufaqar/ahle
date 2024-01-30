@@ -6,7 +6,7 @@ const { default: YouTube } = require('react-youtube');
 
 export const YtVideo = ({ opts, onPlayerReady }) => {
   const { loading, error, data } = useQuery(VideoByTypes, {
-    variables: { id: 'آل-پاکستان-کانفرنس' },
+    variables: { id: 'all-pakistan-conference' },
   });
 
   const videosList = data?.videoType?.videos?.nodes;
