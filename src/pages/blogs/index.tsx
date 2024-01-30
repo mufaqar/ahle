@@ -1,12 +1,13 @@
-import { SideBarHeading } from "@/components/aside";
-import PostDesign from '../../components/post-design-2';
+import { SideBarHeading } from "../../components/aside";
+//import PostDesign from '../../components/post-design-2';
 import apolloClient from "@/config/client";
 import { AllPosts } from "@/config/queries";
 import React from "react";
+import { GetServerSideProps } from "next";
 
 
-const Blog = async () => {
-  const { postData } = await getData()
+export default function Blog({postData }:any) {
+
 
   return (
     <main>
@@ -19,25 +20,23 @@ const Blog = async () => {
             جماعتی خبریں
           </SideBarHeading>
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-4">
-            {postData?.map((post, idx) => {
+            {/* {postData?.map((post:any, idx:number) => {
               return (
                 <PostDesign post={post} idx={idx} layout={2} key={idx} />
               );
-            })}
+            })} */}
           </div>
         </div>
-        {/* 
-          <Pagination data={data?.posts?.nodes.slice(5)} PaginatedData={data?.posts?.nodes.slice(3)} />
-         */}
+        
       </section>
     </main>
   );
 };
 
-export default Blog;
 
 
-async function getData() {
+
+export const getServerSideProps: GetServerSideProps = async () => {
   const [posts] = await Promise.all([
     apolloClient.query({ query: AllPosts }),
   ]);
@@ -47,5 +46,5 @@ async function getData() {
     throw new Error('Failed to fetch data')
   }
 
-  return { postData }
+  return { props: {postData }}
 }
