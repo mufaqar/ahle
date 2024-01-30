@@ -1,17 +1,20 @@
 import React from "react";
-import apolloClient from "@/config/client";
-import { Members } from "@/config/queries";
-import PageBanner from "@/components/banner";
+import apolloClient from "../../config/client";
+import { Members } from "../../config/queries";
+import PageBanner from "../../components/banner";
 import Image from "next/image";
+import { GetServerSideProps } from "next";
 
-const UlmaKaram = async () => {
-    // const [modalIsOpen, setIsOpen] = useState(false);
-    // const [URL, setURL] = useState('');
-    // const OpenModelBox = (image) => {
-    //     setURL(image)
-    //     setIsOpen(true);
-    // }
-    const {members} =  await getData()
+
+
+    export default function UlmaKaram({members}) {
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [URL, setURL] = useState('');
+    const OpenModelBox = (image) => {
+        setURL(image)
+        setIsOpen(true);
+    }
+  
 
     return (
         <main>
@@ -61,10 +64,10 @@ const UlmaKaram = async () => {
     )
 }
 
-export default UlmaKaram;
 
 
-async function getData() {
+
+export const getServerSideProps: GetServerSideProps = async () => {
     const [memberRes] = await Promise.all([
       apolloClient.query({ 
         query: Members,
@@ -74,9 +77,10 @@ async function getData() {
        }),
     ]);
     const members = memberRes?.data?.members.nodes
-    if (!members) {
-      throw new Error('Failed to fetch data')
-    }
-  
-    return { members }
+   
+    return {
+        props: {
+            members
+        },
+     };
 }

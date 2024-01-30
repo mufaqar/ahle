@@ -1,7 +1,7 @@
-"use client"
+
 import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
-import PageBanner from '../../components/banner';
+import PageBanner from '@/components/banner';
 
 const Page = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event:any) => {

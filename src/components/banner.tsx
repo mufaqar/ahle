@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Button from "@/components/button"
 import Link from "next/link";
