@@ -1,13 +1,14 @@
-"use client"
+
 import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import { VideoByTypes } from '@/config/queries';
 import { getIDFromURL } from '@/utils';
 import PageBanner from '../../components/banner';
 import apolloClient from '@/config/client';
+import { GetServerSideProps } from 'next';
 
-const Page = async () => {
-  const onPlayerReady: YouTubeProps['onReady'] = (event:any) => {
+export default function reeliyn({ videosList }: any) {
+  const onPlayerReady: YouTubeProps['onReady'] = (event: any) => {
     event.target.pauseVideo();
   }
 
@@ -16,9 +17,6 @@ const Page = async () => {
       autoplay: 0,
     },
   };
-
-  const { videosList } = await getData()
-
   return (
     <main>
       <PageBanner
@@ -46,24 +44,17 @@ const Page = async () => {
   );
 };
 
-export default Page;
 
-
-
-async function getData() {
+export const getServerSideProps: GetServerSideProps = async () => {
   const [postres] = await Promise.all([
-    apolloClient.query({ 
+    apolloClient.query({
       query: VideoByTypes,
       variables: {
         id: "ریلیاں"
       }
-     }),
+    }),
   ]);
   const videosList = postres?.data?.videoType?.videos?.nodes;
 
-  if (!videosList) {
-    throw new Error('Failed to fetch data')
-  }
-
-  return { videosList }
+  return { props: { videosList } }
 }
