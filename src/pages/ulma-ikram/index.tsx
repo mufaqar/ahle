@@ -2,19 +2,18 @@ import React from "react";
 import apolloClient from "../../config/client";
 import { Members } from "../../config/queries";
 import PageBanner from "../../components/banner";
-import Image from "next/image";
 import { GetServerSideProps } from "next";
+import Image from "next/image";
 
 
 
-    export default function UlmaKaram({members}) {
-    const [modalIsOpen, setIsOpen] = useState(false);
-    const [URL, setURL] = useState('');
-    const OpenModelBox = (image) => {
-        setURL(image)
-        setIsOpen(true);
-    }
-  
+    export default function UlmaKaram({members}:any) {
+    // const [modalIsOpen, setIsOpen] = useState(false);
+    // const [URL, setURL] = useState('');
+    // const OpenModelBox = (image) => {
+    //     setURL(image)
+    //     setIsOpen(true);
+    // }  
 
     return (
         <main>
@@ -29,9 +28,9 @@ import { GetServerSideProps } from "next";
                 <div className='container px-4 md:px-10 mx-auto'>
                     <div className='my-10 md:my-20 md:mt-20 file:grid gap-10'>
                         <div className="grid md:grid-cols-4 grid-cols-1 gap-7">
-                            {members?.map((item) => {
+                            {members?.map((item:any, idx:number) => {
                                 return (
-                                    <div key={item.img} className=''>
+                                    <div key={idx} className=''>
                                         <div className='shadow-md'>
                                             <div className={`relative h-[300px] w-full`}
                                                 // onClick={() => OpenModelBox(item)} 
@@ -64,9 +63,6 @@ import { GetServerSideProps } from "next";
     )
 }
 
-
-
-
 export const getServerSideProps: GetServerSideProps = async () => {
     const [memberRes] = await Promise.all([
       apolloClient.query({ 
@@ -84,3 +80,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
         },
      };
 }
+
