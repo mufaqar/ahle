@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { News_Data } from '../const/news';
+import { News_Data } from '../../const/news';
 import Image from 'next/image';
 import PageBanner from '../../components/banner';
 

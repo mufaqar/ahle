@@ -12,7 +12,7 @@ import { GetServerSideProps } from "next";
 
 export default function PostSlug({ post, posts }: any) {
 
- 
+
 
   return (
     <>
