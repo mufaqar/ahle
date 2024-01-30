@@ -3,11 +3,11 @@ import Gallery_images from '../../components/image-gallery';
 import apolloClient from '@/config/client';
 import { PictureData } from '@/config/queries';
 import PageBanner from '../../components/banner';
+import { GetServerSideProps } from 'next';
 
-const Pictures = async () => {
+export default function Pictures({picturesData }:any) {
 
-  const { picturesData }: any = await getData()
-
+ 
   return (
     <main>
       <PageBanner
@@ -29,10 +29,9 @@ const Pictures = async () => {
   )
 }
 
-export default Pictures
 
 
-async function getData() {
+export const getServerSideProps: GetServerSideProps = async () => {
   const [pictures] = await Promise.all([
     apolloClient.query({
       query: PictureData,
@@ -48,5 +47,5 @@ async function getData() {
     throw new Error("Failed to fetch data");
   }
 
-  return { picturesData };
+  return {props:{ picturesData} };
 }
