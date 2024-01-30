@@ -1,7 +1,7 @@
 import Aside, { SideBarHeading } from "@/components/aside";
 import Footer from "@/components/footer";
 import PageBanner from "@/components/banner";
-import PostDesign from '../components/post-design-2';
+import PostDesign from '../../components/post-design-2';
 import apolloClient from "@/config/client";
 import { AllPosts, singlePost } from "@/config/queries";
 import { PostMokeData } from "@/const/post";

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Visits_Data } from '../const/visits';
 import ModelBox from '../components/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import PageBanner from '../components/banner';
+import PageBanner from '../../components/banner';
 
 const Visits = () => {
 

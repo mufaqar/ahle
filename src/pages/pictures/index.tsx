@@ -1,8 +1,8 @@
 import React from 'react';
-import Gallery_images from '../components/image-gallery';
+import Gallery_images from '../../components/image-gallery';
 import apolloClient from '@/config/client';
 import { PictureData } from '@/config/queries';
-import PageBanner from '../components/banner';
+import PageBanner from '../../components/banner';
 
 const Pictures = async () => {
 

@@ -3,7 +3,7 @@ import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import { VideoByTypes } from '@/config/queries';
 import { getIDFromURL } from '@/utils';
-import PageBanner from '../components/banner';
+import PageBanner from '../../components/banner';
 import apolloClient from '@/config/client';
 
 const Page = async () => {

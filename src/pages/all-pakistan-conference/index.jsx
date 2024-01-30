@@ -2,7 +2,7 @@
 import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import { YtVideo } from '../components/YtVideo'
-import PageBanner from '../components/banner';
+import PageBanner from '../../components/banner';
 
 const Page = () => {
   const onPlayerReady = (event) => {

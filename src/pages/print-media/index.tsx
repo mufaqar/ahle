@@ -2,8 +2,8 @@
 import React from 'react';
 import apolloClient from '@/config/client';
 import { PictureData } from '@/config/queries';
-import Gallery_images from '../components/image-gallery';
-import PageBanner from '../components/banner';
+import Gallery_images from '../../components/image-gallery';
+import PageBanner from '../../components/banner';
 
 const Print_Media = async () => {
   const {picturesData}:any = await getData()
