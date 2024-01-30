@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import ModelBox from '../../components/ModelBox'
+//import ModelBox from '../../components/ModelBox'
 import { Shura_Gallery } from "@/const/exports";
 import PageBanner from "@/components/banner";
 
@@ -35,9 +35,9 @@ const Page = () => {
               </Masonry>
             </ResponsiveMasonry>
           </div>
-          {
+          {/* {
             modalIsOpen && <ModelBox modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} URL={URL} />
-          }
+          } */}
         </div>
       </section>
     </main>

@@ -1,6 +1,6 @@
-import Button from '../components/ui/button'
+import Button from '../../components/button'
 import React from 'react'
-import PageBanner from "@/components/banner";
+import PageBanner from "../../components/banner";
 
 const Razakar = () => {
   return (
