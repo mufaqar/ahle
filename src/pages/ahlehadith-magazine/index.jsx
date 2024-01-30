@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react';
-import { Hadith_Data } from '@/const/hadith';
-//import ModelBox from '@/components/ModelBox';
+import { Hadith_Data } from '../const/hadith';
+//import ModelBox from '../components/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import PageBanner from '@/components/banner';
+import PageBanner from '../components/banner';
 
 const Ahlehadith_Magazine = () => {
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };

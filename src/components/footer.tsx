@@ -1,4 +1,4 @@
-import { NavLinks } from '@/const/navlinks';
+import { NavLinks } from '../const/navlinks';
 import { NavLinksType } from '@/utils/types';
 import Link from 'next/link';
 import React from 'react'

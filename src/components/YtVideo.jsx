@@ -1,7 +1,7 @@
-import { VideoByTypes } from '@/config/queries';
-import { getIDFromURL } from '@/utils';
+import { getIDFromURL } from '../utils';
 import { useQuery } from '@apollo/client';
 
+import {VideoByTypes} from '../config/queries'
 const { default: YouTube } = require('react-youtube');
 
 export const YtVideo = ({ opts, onPlayerReady }) => {

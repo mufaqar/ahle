@@ -1,5 +1,5 @@
 
-import PageBanner from '@/components/banner'
+import PageBanner from '../components/banner'
 import React from 'react'
 
 

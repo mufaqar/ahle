@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useContext, useEffect, useState } from 'react'
 import { Logo } from './logo';
-import {NavLinks} from '@/const/navlinks'
+import {NavLinks} from '../const/navlinks'
 import { SettingsContext } from "@/context/setting-context";
 import { BiChevronDown, BiSearch, BiMenuAltRight } from 'react-icons/bi';
 import { BsEnvelopeAtFill } from 'react-icons/bs';

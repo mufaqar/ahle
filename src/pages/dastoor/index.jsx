@@ -1,11 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import { Dastoor_Data } from '@/const/dastor';
-import {ModelBox} from '@/components/ModelBox';
+import { Dastoor_Data } from '../const/dastor';
+import {ModelBox} from '../components/ModelBox';
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import Image from 'next/image';
-import PageBanner from '@/components/banner';
+import PageBanner from '../components/banner';
 
 
 const Pictures = () => {

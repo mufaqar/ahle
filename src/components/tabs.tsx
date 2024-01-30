@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Layout from './layout';
 import Nazryat from './nazryat';
-import Data  from '@/const/jammattest';
+import Data  from '../const/jammattest';
 
 const Tabs = () => {
     const defaultSelectedName = Data[0].Name; // Get the name of the first item as default selectedName

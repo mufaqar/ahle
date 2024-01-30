@@ -1,5 +1,5 @@
 import { SideBarHeading } from "@/components/aside";
-import PostDesign from '@/components/post-design-2';
+import PostDesign from '../components/post-design-2';
 import apolloClient from "@/config/client";
 import { AllPosts } from "@/config/queries";
 import React from "react";
