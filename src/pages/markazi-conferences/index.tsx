@@ -25,7 +25,7 @@ const {videosList} = await getData()
        <PageBanner
         title="مرکزی کانفرنسز"
         subTitle=""
-        image="/assets/images/slid1.jpeg"
+        image="/images/banner/markaziconferences.jpg"
         buttontext=""
         buttonLink=""
       />

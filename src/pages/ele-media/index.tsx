@@ -18,7 +18,7 @@ const Page = () => {
       <PageBanner
         title=" الیکٹرانک میڈیا"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/banner/electronic.jpg"
         buttontext=""
         buttonLink=""
       />

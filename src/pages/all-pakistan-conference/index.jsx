@@ -19,7 +19,7 @@ const Page = () => {
       <PageBanner
         title="آل پاکستان کانفرنس"
         subTitle=""
-        image="/assets/images/slid1.jpeg"
+        image="/images/banner/conferences.jpeg"
         buttontext=""
         buttonLink=""
       />

@@ -8,7 +8,7 @@ const Razakar = () => {
       <PageBanner
         title="رضاکار بنیں"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/banner/joinus.jpg"
         buttontext=""
         buttonLink=""
       />

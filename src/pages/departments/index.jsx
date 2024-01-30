@@ -14,11 +14,12 @@ const Page = () => {
     setIsOpen(true);
   }
   return (
+    
     <main>
       <PageBanner
         title="شعبہ جات"
         subTitle=""
-        image="/assets/images/slid1.jpeg"
+        image="/images/banner/departments.jpg"
         buttontext=""
         buttonLink=""
       />

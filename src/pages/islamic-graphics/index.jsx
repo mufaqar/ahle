@@ -8,7 +8,7 @@ const Islamic_Graphics = () => {
       <PageBanner
         title="اسلامک گرافکس"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/contat.jpg"
         buttontext=""
         buttonLink=""
       />

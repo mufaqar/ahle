@@ -11,7 +11,7 @@ const Page = () => {
       <PageBanner
         title="جماعتی خبریں"
         subTitle=""
-        image="/assets/images/slid1.jpeg"
+        image="/images/slid1.jpeg"
         buttontext=""
         buttonLink=""
       />

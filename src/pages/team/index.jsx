@@ -18,7 +18,7 @@ const Page = () => {
       <PageBanner
           title="عاملہ"
           subTitle=""
-          image="/assets/images/slid1.jpeg"
+          image="/images/slid1.jpeg"
           buttontext=""
           buttonLink=""
         />

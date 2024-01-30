@@ -13,7 +13,7 @@ const Pictures = async () => {
       <PageBanner
         title="تصاویر"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/banner/pics.jpg"
         buttontext=""
         buttonLink=""
       />

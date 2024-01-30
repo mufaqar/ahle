@@ -13,7 +13,7 @@ const Print_Media = async () => {
     <PageBanner
         title="پرنٹ میڈیا کوریج"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/banner/printmedia.jpg"
         buttontext=""
         buttonLink=""
       />

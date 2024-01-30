@@ -19,7 +19,7 @@ const Visits = () => {
       <PageBanner
         title="یادرفتگاں"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/contat.jpg"
         buttontext=""
         buttonLink=""
       />

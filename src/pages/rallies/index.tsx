@@ -24,7 +24,7 @@ const Page = async () => {
       <PageBanner
         title="ریلیاں"
         subTitle=""
-        image="/assets/images/slid1.jpeg"
+        image="/images/banner/reeliyn.jpg"
         buttontext=""
         buttonLink=""
       />

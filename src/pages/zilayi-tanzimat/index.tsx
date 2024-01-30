@@ -7,7 +7,7 @@ const Page = () => {
      <PageBanner
           title="ذیلی تنظیمات"
           subTitle=""
-          image="/assets/images/slid1.jpeg"
+          image="/images/banner/zilayntanzeem.jpg"
           buttontext=""
           buttonLink=""
         />

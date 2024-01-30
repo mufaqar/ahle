@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Layout from '@/components/Layout/Layout';
+import Layout from '@/components/Layout';
 import { Hadith_Data } from '@/const/hadith';
 import ModelBox from '@/components/ModelBox';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
@@ -19,7 +19,7 @@ const Ahlehadith_Magazine = () => {
       <PageBanner
         title="اہلِ حدیث میگزین"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/banner/magazine.jpg"
         buttontext=""
         buttonLink=""
       />

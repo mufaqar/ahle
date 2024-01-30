@@ -7,7 +7,7 @@ const Introduction = () => {
        <PageBanner
           title="تعارف"
           subTitle=""
-          image="/assets/images/contat.jpg"
+          image="/images/contat.jpg"
           buttontext=""
           buttonLink=""
         />

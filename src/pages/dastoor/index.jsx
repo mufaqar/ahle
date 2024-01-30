@@ -22,7 +22,7 @@ const Pictures = () => {
     <PageBanner
           title="دستور"
           subTitle=""
-          image="/assets/images/contat.jpg"
+          image="/images/banner/dastoor.jpg"
           buttontext=""
           buttonLink=""
         />

@@ -18,7 +18,7 @@ const UlmaKaram = async () => {
             <PageBanner
                 title="علمائےکرام/معروف شخصیات"
                 subTitle=""
-                image="/assets/images/slid1.jpeg"
+                image="/images/banner/ulma.jpeg"
                 buttontext=""
                 buttonLink=""
             />

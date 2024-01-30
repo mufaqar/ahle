@@ -24,7 +24,7 @@ const Page = async () => {
        <PageBanner
           title="تنظیمی اجلاس"
           subTitle=""
-          image="/assets/images/slid1.jpeg"
+          image="/images/banner/tanzeemiijlas.jpeg"
           buttontext=""
           buttonLink=""
         />
