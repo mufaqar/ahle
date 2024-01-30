@@ -5,29 +5,26 @@ import { VideoByTypes } from '@/config/queries';
 import { getIDFromURL } from '@/utils';
 import PageBanner from '../../components/banner';
 import apolloClient from '@/config/client';
+import { GetServerSideProps } from 'next';
 
-const Page = async () => {
-  const onPlayerReady: YouTubeProps['onReady'] = (event:any) => {
+export default function tanzeemiijlas({ videosList }: any) {
+  const onPlayerReady: YouTubeProps['onReady'] = (event: any) => {
     event.target.pauseVideo();
   }
-
   const opts: YouTubeProps['opts'] = {
     playerVars: {
       autoplay: 0,
     },
   };
-
-  const { videosList } = await getData()
-
   return (
     <main>
-       <PageBanner
-          title="تنظیمی اجلاس"
-          subTitle=""
-          image="/images/banner/tanzeemiijlas.jpeg"
-          buttontext=""
-          buttonLink=""
-        />
+      <PageBanner
+        title="تنظیمی اجلاس"
+        subTitle=""
+        image="/images/banner/tanzeemiijlas.jpeg"
+        buttontext=""
+        buttonLink=""
+      />
       <section className='container px-4 md:px-10 mx-auto'>
         <div className='items-center font-ahle my-10 md:my-20 md:mt-20 grid gap-10'>
           <div className="my-10 grid md:grid-cols-3 grid-cols-1 gap-7">
@@ -46,16 +43,16 @@ const Page = async () => {
   );
 };
 
-export default Page;
 
-async function getData() {
+
+export const getServerSideProps: GetServerSideProps = async () => {
   const [postres] = await Promise.all([
-    apolloClient.query({ 
+    apolloClient.query({
       query: VideoByTypes,
       variables: {
-        id: "تنظیمی-اجلاس" 
+        id: "تنظیمی-اجلاس"
       }
-     }),
+    }),
   ]);
   const videosList = postres?.data?.videoType?.videos?.nodes;
 
@@ -63,5 +60,5 @@ async function getData() {
     throw new Error('Failed to fetch data')
   }
 
-  return { videosList }
+  return { props: { videosList } }
 }
