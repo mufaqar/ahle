@@ -123,7 +123,7 @@ export const NavLinks = [
                },
                {
                     name: 'اداریہ',
-                    link: '#',
+                    link: '/adaria',
                },
                {
                     name: 'حالات حاظرہ خاص مضامین',

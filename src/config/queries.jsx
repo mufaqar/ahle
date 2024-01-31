@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const AllPosts = gql`
   query ALLPOSTS {
@@ -110,6 +110,32 @@ export const Books = gql`
             node {
               mediaItemUrl
             }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const Articles = gql`
+  query articles($terms: [String] = "") {
+    articles(
+      where: {
+        taxQuery: {
+          relation: AND
+          taxArray: { terms: $terms, taxonomy: ARTICLECATEGORY, field: SLUG }
+        }
+      }
+    ) {
+      nodes {
+        date
+        content
+        slug
+        databaseId
+        title
+        featuredImage {
+          node {
+            mediaItemUrl
           }
         }
       }
