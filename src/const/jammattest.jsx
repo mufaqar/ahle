@@ -32,7 +32,7 @@ const Data = [
             
             
         ],
-        img: "/assets/images/slid1.jpeg",
+        img: "/images/slid1.jpeg",
         info: [
             {
                 position: 'اہل حدیث یوتھ فورس ',

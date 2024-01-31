@@ -46,7 +46,7 @@ export default function UlmaKaram({ members }: any) {
                                                     />
                                                 </div>
                                                 <div className='p-5 text-center'>
-                                                    <h3 className='text-xl font-ahle text-yellow mb-5'>
+                                                    <h3 className='text-xl font-ahle py-4  text-yellow mb-5 bg-[#012f1e]'>
                                                         {item?.title}
                                                     </h3>
                                                 </div>

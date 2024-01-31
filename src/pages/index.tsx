@@ -109,7 +109,7 @@ export default function Home({ postData, dailyHadees, dailyQuran, dailyQoute, vi
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 ">
             <div className=" border border-light-gray">
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
-                <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
+                <Image src="/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
                 <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
                   روزانہ قرآن
                 </h2>
@@ -127,7 +127,7 @@ export default function Home({ postData, dailyHadees, dailyQuran, dailyQoute, vi
             </div>
             <div className=" border border-light-gray">
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
-                <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
+                <Image src="/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
                 <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
                   روزانہ کی حدیث
                 </h2>
@@ -142,7 +142,7 @@ export default function Home({ postData, dailyHadees, dailyQuran, dailyQoute, vi
             </div>
             <div className=" border border-light-gray">
               <div className="bg-[#012f1e] p-5 flex gap-3 items-center">
-                <Image src="/assets/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
+                <Image src="/images/iqra-icon.png" alt="iqra-icon.png" width={50} height={50} />
                 <h2 className="text-3xl leading-[4rem] uppercase font-ahle text-white">
                   اقوالِ سلف
                 </h2>
@@ -163,7 +163,7 @@ export default function Home({ postData, dailyHadees, dailyQuran, dailyQoute, vi
           </div>
         </div>
       </section>
-      <section className="py-16 bg-[url('/assets/images/tabdeeli.jpg')] bg-center bg-cover bg-black/50 bg-blend-multiply">
+      <section className="py-16 bg-[url('/images/tabdeeli.jpg')] bg-center bg-cover bg-black/50 bg-blend-multiply">
         <section className='container px-4 md:px-10 mx-auto'>
           <div className="flex md:flex-row flex-col gap-5">
             <div className="md:w-1/4 w-full">
