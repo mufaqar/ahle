@@ -18,7 +18,7 @@ export default function AllPakistanConferences() {
       <PageBanner
         title="آل پاکستان کانفرنس"
         subTitle=""
-        image="/images/banner/conferences.jpeg"
+        image="/images/banner/conferences.jpg"
         buttontext=""
         buttonLink=""
       />

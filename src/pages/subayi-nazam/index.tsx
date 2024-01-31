@@ -7,7 +7,7 @@ const Page = () => {
       <PageBanner
           title="صوبائی نظم"
           subTitle=""
-          image="/images/banner/subayi.jpeg"
+          image="/images/banner/subayi.jpg"
           buttontext=""
           buttonLink=""
         />

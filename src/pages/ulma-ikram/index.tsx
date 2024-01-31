@@ -20,7 +20,7 @@ import Image from "next/image";
             <PageBanner
                 title="علمائےکرام/معروف شخصیات"
                 subTitle=""
-                image="/images/banner/ulma.jpeg"
+                image="/images/banner/ulma.jpg"
                 buttontext=""
                 buttonLink=""
             />

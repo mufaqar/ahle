@@ -21,7 +21,7 @@ export default function tanzeemiijlas({ videosList }: any) {
       <PageBanner
         title="تنظیمی اجلاس"
         subTitle=""
-        image="/images/banner/tanzeemiijlas.jpeg"
+        image="/images/banner/tanzeemiijlas.jpg"
         buttontext=""
         buttonLink=""
       />
