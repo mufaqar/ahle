@@ -11,7 +11,7 @@ export default function Donate_us() {
 
 
 
-            <PageBanner title="Donate Us" image="/images/contat.jpg" />
+            <PageBanner title="Donate Us" image="/images/banner.jpg" />
             {/* Categories section  */}
             <section className='container mx-auto mb-28 px-4'>
                 {/* heading  */}

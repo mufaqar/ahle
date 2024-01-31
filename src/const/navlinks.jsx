@@ -19,7 +19,7 @@ export const NavLinks = [
                },
                {
                     name: 'عاملہ',
-                    link: '/team',
+                    link: '/aamila',
                },
                {
                     name: 'شورىٰ',
@@ -134,7 +134,7 @@ export const NavLinks = [
      {
           id: 7,
           name: 'رفاہِ عامہ سرگرمیاں',
-          link: '/islamic-graphics'
+          link: '/'
      },
      {
           id: 8,
@@ -144,7 +144,7 @@ export const NavLinks = [
      {
           id: 9,
           name: 'جوائن کریں',
-          link: '/haft-roza-ahlehadith'
+          link: '/join-us'
      },
      {
           id: 10,

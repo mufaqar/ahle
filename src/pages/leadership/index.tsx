@@ -29,7 +29,7 @@ const Page = () => {
                   <img className='' src="/images/slid1.jpeg" alt="img" />
                 </div>
                 <div className="md:w-3/4 w-full">
-                  <p className='font-ahle text-base text-gray-600 dark:text-text mb-3'>
+                  <p className='font-ahle text-base text-gray-600 dark:text-text mb-3 leading-loose tracking-wider'>
                     پروفیسر ساجد میر 2 اکتوبر 1938ء کو سیالکوٹ کے ایک علمی گھرانے میں پیدا ہوئے۔ انہوں نے اعلیٰ تعلیم حاصل کی۔
                     ایم۔ اے (انگلش) ۔۔۔ گورنمنٹ کالج لاہور، 1960ء، سیکنڈ ڈویژن ،
                     ایم۔ اے (اسلامیات)، پنجاب یونیورسٹی، 1969ء، فرسٹ ڈویژن،
@@ -54,7 +54,7 @@ const Page = () => {
                     عالمیہ کورس۔ وفاق المدارس السلفیہ۔
                     ان کا سروس ریکارڈ کچھ یوں ہے۔
                   </p>
-                  <p className='font-ahle text-base text-gray-600 dark:text-text mb-3'>
+                  <p className='font-ahle text-base text-gray-600 dark:text-text mb-3 leading-loose tracking-wider'>
                     لیکچرار (انگلش)، جناح اسلامیہ کالج سیالکوٹ ( 14-9-1960 تا 10-2-1963) ،
                     انسٹرکٹر (انگلش)، گورنمنٹ پولی ٹیکنیک انسٹیٹیوٹ سیالکوٹ (1963ء تا 1966ء) ،
                     سینئر انسٹرکٹر (انگلش اینڈ مینجمنٹ) گورنمنٹ پولی ٹیکنیک انسٹیٹیوٹ سیالکوٹ و لاہور (1966ء تا 1975ء) ،
@@ -90,7 +90,7 @@ const Page = () => {
                     سیرت کانفرنس، ٹریپولی، لیبیا 1998، 2003ء۔
                     اس کے علاوہ بیلجئم، ہالینڈ، سوئٹزر لینڈ، اٹلی، فرانس، نائیجیریا، کینیا، سپین، ڈنمارک، آئیر لینڈ، کینیڈا ، یونان کے سفر کر چکے ہیں۔
                   </p>
-                  <p className='font-ahle text-base text-gray-600 dark:text-text mb-3'>
+                  <p className='font-ahle text-base text-gray-600 dark:text-text mb-3 leading-loose tracking-wider'>
                     ان کی تصانیف میں
                     1 ۔ عیسائیت، مطالعہ و تجزیہ
                     2 ۔ تصحیح ترجمہ ’’صحیح مسلم‘‘ مطبوعہ شیخ محمد اشرف پبلشرز

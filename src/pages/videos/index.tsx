@@ -12,7 +12,7 @@ export default function Videos({videosData,videoTypeData}:any) {
       <PageBanner
         title="وڈیوز"
         subTitle=""
-        image="/assets/images/contat.jpg"
+        image="/images/banner.jpg"
         buttontext=""
         buttonLink=""
       />
