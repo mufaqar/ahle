@@ -26,7 +26,7 @@ const Page = () => {
               </div>
               <div className="flex md:flex-row flex-col justify-between gap-8">
                 <div className="md:w-1/4 w-full">
-                  <img className='' src="/images/slid1.jpeg" alt="img" />
+                  <img className='' src="/images/slid1.jpeg" alt="Sajid Meet" />
                 </div>
                 <div className="md:w-3/4 w-full">
                   <p className='font-ahle text-base text-gray-600 dark:text-text mb-3 leading-loose tracking-wider'>
