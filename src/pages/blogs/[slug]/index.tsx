@@ -34,9 +34,9 @@ export default function PostSlug({ post, posts }: any) {
             <figure className="relative">
               <Image
                 src={post?.featuredImage?.node?.mediaItemUrl}
-                alt="image"
-                width={100}
-                height={100}
+                alt="featuredImage"
+                width={850}
+                height={460}
                 className="w-full mt-6"
               />
             </figure>
