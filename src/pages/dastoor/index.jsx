@@ -6,10 +6,10 @@ import { Dastoor_Data } from '../../const/dastor';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import Image from 'next/image';
 import PageBanner from '../../components/banner';
-
+import SeoMeta from "@/components/seo";
 
 const Pictures = () => {
-  
+
   const columnsCountBreakPoints = { 200: 1, 280: 2, 900: 3 };
   const [modalIsOpen, setIsOpen] = useState(false);
   const [URL, setURL] = useState('');
@@ -20,14 +20,16 @@ const Pictures = () => {
 
   return (
     <>
-    <PageBanner
-          title="دستور"
-          subTitle=""
-          image="/images/banner/dastoor.jpg"
-          buttontext=""
-          buttonLink=""
-        />
-    <section className='container px-4 md:px-10 mx-auto'>
+      <SeoMeta title="دستور" description="مرکزی جمعیت اہل حدیث پاکستان اہل حدیث کی نمائندہ مذہبی و سیاسی جماعت ہے" url="dastoor" />
+
+      <PageBanner
+        title="دستور"
+        subTitle=""
+        image="/images/banner/dastoor.jpg"
+        buttontext=""
+        buttonLink=""
+      />
+      <section className='container px-4 md:px-10 mx-auto'>
         <div className="my-20">
           <div className="my-10">
             <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>

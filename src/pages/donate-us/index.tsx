@@ -1,13 +1,15 @@
 
 import PageBanner from '../../components/banner'
 import React from 'react'
-
+import SeoMeta from "@/components/seo";
 
 
 
 export default function Donate_us() {
     return (
         <>
+            <SeoMeta title="donate-us" description="مرکزی جمعیت اہل حدیث پاکستان اہل حدیث کی نمائندہ مذہبی و سیاسی جماعت ہے" url="donate-us" />
+
 
 
 

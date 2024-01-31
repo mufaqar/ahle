@@ -5,22 +5,26 @@ import { PictureData } from '@/config/queries';
 import Gallery_images from '../../components/image-gallery';
 import PageBanner from '../../components/banner';
 import { GetServerSideProps } from 'next';
+import SeoMeta from "@/components/seo";
+export default function Print_Media({ picturesData }: any) {
 
-export default function Print_Media({picturesData }:any) {
-  
   return (
-    <main>
-    <PageBanner
-        title="پرنٹ میڈیا کوریج"
-        subTitle=""
-        image="/images/banner/printmedia.jpg"
-        buttontext=""
-        buttonLink=""
-      />
-      <section className='container px-4 md:px-10 mx-auto'>
-        <Gallery_images picturesData={picturesData} />
-      </section>
-    </main>
+    <>
+      <SeoMeta title="پرنٹ میڈیا کوریج" description="مرکزی جمعیت اہل حدیث پاکستان اہل حدیث کی نمائندہ مذہبی و سیاسی جماعت ہے" url="print-media" />
+
+      <main>
+        <PageBanner
+          title="پرنٹ میڈیا کوریج"
+          subTitle=""
+          image="/images/banner/printmedia.jpg"
+          buttontext=""
+          buttonLink=""
+        />
+        <section className='container px-4 md:px-10 mx-auto'>
+          <Gallery_images picturesData={picturesData} />
+        </section>
+      </main>
+    </>
   )
 }
 
@@ -42,5 +46,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
     throw new Error("Failed to fetch data");
   }
 
-  return { props:{ picturesData }};
+  return { props: { picturesData } };
 }
