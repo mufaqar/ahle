@@ -1,10 +1,12 @@
-"use client";
+
 import React, { useState } from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Slider from 'react-slick';
 import ModelBox from '../components/modelbox';
+import Image from 'next/image';
 
 const Team = ({membersData}) => {
+    console.log("🚀 ~ Team ~ membersData:", membersData)
     const settings = {
         dots: false,
         infinite: true,
@@ -48,20 +50,20 @@ const Team = ({membersData}) => {
         <>
             <section className="relative blogs ">
                 <Slider ref={slider} {...settings}>
-                    {Team_data?.map((item) => {
+                    {membersData?.map((item) => {
                         return (
                            <div className='px-3' key={item.img}>
                             <div  className='h-[590px] relative before:content-[" "] before:absolute before:top-3 before:bottom-3 before:left-3 before:right-3 before:border-white before:border group'>
                             <div className='h-full w-full '>
-                                <img src={item?.img}
+                                <Image src={item?.featuredImage?.node?.mediaItemUrl}
                                     alt='image'
-                                    // height={300}
-                                    // width={300}
+                                    height={300}
+                                    width={300}
                                     className='h-full w-full z-[1] object-cover ' />
                                 <div className='absolute bottom-8 right-5 z-[1]'>
                                     <p
                                         className="bg-yellow text-black group-hover:bg-light-blue group-hover:text-white text-base px-8 py-2.5 uppercase ">
-                                        {item?.name}
+                                        {item?.title}
                                     </p>
                                 </div>
                             </div>
@@ -84,33 +86,33 @@ const Team = ({membersData}) => {
 
 export default Team
 
-export const Team_data = [
-    {
-        name: "سید داؤد غزنوی",
-        img: "/images/team/1.jpg",
-    },
-    {
-        name: "مولانا ابراہیم میر سیالکوٹی",
-        img: "/images/team/2.jpg",
-    },
-    {
-        name: "مولانا اسماعیل سلفی",
-        img: "/images/team/3.jpg",
-    },
-    {
-        name: "حافظ عبداللہ بڈھیمالوی",
-        img: "/images/team/4.jpg",
-    },
-    {
-        name: "علامہ احسان الہی ظہیر",
-        img: "/images/team/5.jpg",
-    },
-    {
-        name: "مولانا معین الدین لکھوی",
-        img: "/images/team/6.jpg",
-    },
-    {
-        name: "مولانا حبیب الرحمان یزدانی",
-        img: "/images/team/7.jpg",
-    },
-];
+// export const Team_data = [
+//     {
+//         name: "سید داؤد غزنوی",
+//         img: "/images/team/1.jpg",
+//     },
+//     {
+//         name: "مولانا ابراہیم میر سیالکوٹی",
+//         img: "/images/team/2.jpg",
+//     },
+//     {
+//         name: "مولانا اسماعیل سلفی",
+//         img: "/images/team/3.jpg",
+//     },
+//     {
+//         name: "حافظ عبداللہ بڈھیمالوی",
+//         img: "/images/team/4.jpg",
+//     },
+//     {
+//         name: "علامہ احسان الہی ظہیر",
+//         img: "/images/team/5.jpg",
+//     },
+//     {
+//         name: "مولانا معین الدین لکھوی",
+//         img: "/images/team/6.jpg",
+//     },
+//     {
+//         name: "مولانا حبیب الرحمان یزدانی",
+//         img: "/images/team/7.jpg",
+//     },
+// ];
