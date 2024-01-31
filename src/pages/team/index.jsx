@@ -13,6 +13,7 @@ const Page = () => {
     setURL(image)
     setIsOpen(true);
   }
+  
   return (
     <main>
       <PageBanner

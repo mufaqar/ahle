@@ -1,138 +1,136 @@
 
 export const Gallery = [
   {
-    img: "/assets/images/khidmat/1.JPG",
+    img: "/images/khidmat/1.JPG",
   },
   {
-    img: "/assets/images/khidmat/2.JPG",
+    img: "/images/khidmat/2.JPG",
   },
   {
-    img: "/assets/images/khidmat/3.JPG",
+    img: "/images/khidmat/3.JPG",
   },
   {
-    img: "/assets/images/khidmat/4.JPG",
+    img: "/images/khidmat/4.JPG",
   },
   {
-    img: "/assets/images/khidmat/5.JPG",
+    img: "/images/khidmat/5.JPG",
   },
   {
-    img: "/assets/images/khidmat/6.JPG",
+    img: "/images/khidmat/6.JPG",
   },
 ];
 
 
 export const Shura_Gallery = [
   {
-    img: "1.JPG",
+    img: "/images/shaura/1.jpg",
   },
   {
-    img: "2.JPG",
+    img: "/images/shaura/2.jpg",
   },
   {
-    img: "3.JPG",
+    img: "/images/shaura/3.jpg",
   },
   {
-    img: "4.JPG",
+    img: "/images/shaura/4.jpg",
   },
   {
-    img: "5.JPG",
+    img: "/images/shaura/5.jpg",
   },
   {
-    img: "6.JPG",
+    img: "/images/shaura/6.jpg",
   },
   {
-    img: "7.JPG",
+    img: "/images/shaura/7.jpg",
   },
   {
-    img: "8.JPG",
+    img: "/images/shaura/8.jpg",
   },
   {
-    img: "9.JPG",
+    img: "/images/shaura/9.jpg",
   },
   {
-    img: "10.JPG",
+    img: "/images/shaura/10.jpg",
   },
   {
-    img: "11.JPG",
+    img: "/images/shaura/11.jpg",
   },
   {
-    img: "12.JPG",
+    img: "/images/shaura/12.jpg",
   },
   {
-    img: "13.JPG",
+    img: "/images/shaura/13.jpg",
   },
   {
-    img: "14.JPG",
+    img: "/images/shaura/14.jpg",
   },
   {
-    img: "15.JPG",
+    img: "/images/shaura/15.jpg",
   },
   {
-    img: "16.JPG",
+    img:"/images/shaura/16.jpg",
   },
   {
-    img: "17.JPG",
+    img:"/images/shaura/17.jpg",
   },
   {
-    img: "18.JPG",
+    img: "/images/shaura/18.jpg",
   },
   {
-    img: "19.JPG",
+    img:"/images/shaura/19.jpg",
   },
   {
-    img: "20.JPG",
+    img: "/images/shaura/20.jpg",
   },
 ];
 
 
 export const Team_Gallery = [
   {
-    img: "/assets/images/aamla/1.JPG",
+    img: "/images/aamla/1.JPG",
   },
   {
-    img: "/assets/images/aamla/2.JPG",
+    img: "/images/aamla/2.JPG",
   },
   {
-    img: "/assets/images/aamla/3.JPG",
+    img: "/images/aamla/3.JPG",
+  },
+ 
+  {
+    img: "/aamla/5.JPG",
   },
   {
-    img: "/assets/images/aamla/4.JPG",
+    img: "/images/aamla/6.JPG",
   },
   {
-    img: "/assets/images/aamla/5.JPG",
+    img: "/images/aamla/7.JPG",
   },
   {
-    img: "/assets/images/aamla/6.JPG",
+    img: "/images/aamla/8.JPG",
   },
   {
-    img: "/assets/images/aamla/7.JPG",
+    img: "/images/aamla/9.JPG",
   },
   {
-    img: "/assets/images/aamla/8.JPG",
+    img: "/images/aamla/10.JPG",
   },
   {
-    img: "/assets/images/aamla/9.JPG",
+    img: "/images/aamla/11.JPG",
   },
   {
-    img: "/assets/images/aamla/10.JPG",
+    img: "/images/aamla/12.JPG",
   },
   {
-    img: "/assets/images/aamla/11.JPG",
+    img: "/images/aamla/13.JPG",
   },
   {
-    img: "/assets/images/aamla/12.JPG",
+    img: "/images/aamla/14.JPG",
   },
   {
-    img: "/assets/images/aamla/13.JPG",
+    img: "/images/aamla/15.JPG",
   },
   {
-    img: "/assets/images/aamla/14.JPG",
-  },
-  {
-    img: "/assets/images/aamla/15.JPG",
-  },
-  {
-    img: "/assets/images/aamla/16.JPG",
+    img: "/images/aamla/16.JPG",
   },
 ];
 

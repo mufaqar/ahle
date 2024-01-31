@@ -4,7 +4,7 @@ import ModelBox from './modelbox';
 import Image from 'next/image';
 
 export const VideosGallery = ({ videosData, type }: any) => {
-    console.log("🚀 ~ VideosGallery ~ videosData:", videosData)
+   
     const [modalIsOpen, setIsOpen] = useState(false);
 
     const [URL, setURL] = useState("");
