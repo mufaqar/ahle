@@ -236,7 +236,7 @@ export default function Home({ postData, dailyHadees, dailyQuran, dailyQoute, vi
                 مشہور شخصیات
               </h2>
               <Link
-                href="/islamic-graphics"
+                href="/ulma-ikram"
                 className="p-2 px-4 rounded-md bg-light-gray active:scale-105 hover:underline hover:shadow-lg"
               >
                 مشہور شخصیات
