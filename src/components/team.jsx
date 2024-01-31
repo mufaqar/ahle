@@ -4,7 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Slider from 'react-slick';
 import ModelBox from '../components/modelbox';
 
-const Team = () => {
+const Team = ({membersData}) => {
     const settings = {
         dots: false,
         infinite: true,
