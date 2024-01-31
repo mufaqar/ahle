@@ -6,7 +6,7 @@ import ModelBox from '../components/modelbox';
 import Image from 'next/image';
 
 const Team = ({membersData}) => {
-    console.log("🚀 ~ Team ~ membersData:", membersData)
+  
     const settings = {
         dots: false,
         infinite: true,
