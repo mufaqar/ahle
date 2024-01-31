@@ -119,7 +119,7 @@ export const NavLinks = [
           sub_menu: [
                {
                     name: 'درس قرآن و حدیث',
-                    link: '#',
+                    link: '/quran-hadees',
                },
                {
                     name: 'اداریہ',
@@ -127,7 +127,7 @@ export const NavLinks = [
                },
                {
                     name: 'حالات حاظرہ خاص مضامین',
-                    link: '#',
+                    link: '/current-affairs',
                },
           ]
      },
