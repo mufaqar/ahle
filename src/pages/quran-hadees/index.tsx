@@ -10,7 +10,7 @@ import SeoMeta from "@/components/seo";
 
 
 export default function QuranOhadees({ article_data }: any) {
-    console.log("🚀 ~ Adaria ~ article_data:", article_data)
+    //console.log("🚀 ~ Adaria ~ article_data:", article_data)
     // const [modalIsOpen, setIsOpen] = useState(false);
     // const [URL, setURL] = useState('');
     // const OpenModelBox = (image) => {
@@ -20,11 +20,11 @@ export default function QuranOhadees({ article_data }: any) {
 
     return (
         <>
-            <SeoMeta title="علمائےکرام/معروف شخصیات" description="مرکزی جمعیت اہل حدیث پاکستان اہل حدیث کی نمائندہ مذہبی و سیاسی جماعت ہے" url="quran-hadees" />
+            <SeoMeta title="درس قرآن و حدیث" description="مرکزی جمعیت اہل حدیث پاکستان اہل حدیث کی نمائندہ مذہبی و سیاسی جماعت ہے" url="quran-hadees" />
 
             <main>
                 <PageBanner
-                    title="علمائےکرام/معروف شخصیات"
+                    title="درس قرآن و حدیث"
                     subTitle=""
                     image="/images/banner/ulma.jpg"
                     buttontext=""
