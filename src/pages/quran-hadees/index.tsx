@@ -26,7 +26,7 @@ export default function QuranOhadees({ article_data }: any) {
                 <PageBanner
                     title="درس قرآن و حدیث"
                     subTitle=""
-                    image="/images/banner/ulma.jpg"
+                    image="/images/banner.jpg"
                     buttontext=""
                     buttonLink=""
                 />
