@@ -13,12 +13,15 @@ import { AllPosts, Books, Members, UpdatesByCategoryHadees, UpdatesByCategoryQou
 import { GetServerSideProps } from "next";
 
 import Image from 'next/image'
+import SeoMeta from "@/components/seo";
 
 export default function Home({ postData, dailyHadees, dailyQuran, dailyQoute, videosData, booksData, membersData }: any) {
 
   const posts = postData
   return (
     <>
+       <SeoMeta title="مرکزی جمعیت " description="مرکزی جمعیت اہل حدیث پاکستان اہل حدیث کی نمائندہ مذہبی و سیاسی جماعت ہے" url="" />
+    
       <Main1 />
       <Sub_Nav />
       <Tabs />
